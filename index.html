@@ -6,6 +6,10 @@ pre{background:#f3f4f7;padding:.8rem;overflow-x:auto;border-radius:6px}code{font
 The same packages are attached to every <a href="https://github.com/imoes/vi-mcp/releases">GitHub release</a>.</p>
 <p>Signing key (OpenPGP, Ed25519): <span class="fp">4598 3154 14EB F86C ABD3 22D9 730B 75BF AC30 36B7</span> — <a href="vi-mcp-repo.asc">vi-mcp-repo.asc</a>.
 Compare the fingerprint with the one in the README of the code repository before you trust it.</p>
+<h2>In one line</h2>
+<pre>curl -fsSL https://imoes.github.io/vi-mcp-packages/setup.sh | sudo sh</pre>
+<p>Adds the repository — key and source — on apt and dnf systems, installs nothing else (<a href="setup.sh">read it first</a>). Then
+<code>sudo apt install vi-mcp</code> or <code>sudo dnf install vi-mcp</code>. The same by hand:</p>
 <h2>Debian 12+, Ubuntu 24.04+</h2>
 <pre>sudo curl -fsSLo /usr/share/keyrings/vi-mcp.gpg https://imoes.github.io/vi-mcp-packages/vi-mcp-repo.gpg
 sudo curl -fsSLo /etc/apt/sources.list.d/vi-mcp.sources https://imoes.github.io/vi-mcp-packages/vi-mcp.sources
