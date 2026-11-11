@@ -1,0 +1,21 @@
+Package: vi-mcp
+Version: 0.50.1-1
+Architecture: all
+Maintainer: Thomas Kluge <32100851+imoes@users.noreply.github.com>
+Installed-Size: 1504
+Depends: python3 (>= 3.11), python3-sklearn, python3-cryptography, python3-numpy, python3-yaml, adduser, systemd, debconf (>= 0.5) | debconf-2.0
+Recommends: python3-libtorrent
+Suggests: python3-psycopg
+Filename: pool/main/vi-mcp_0.50.1-1_all.deb
+Size: 349258
+MD5sum: 8960739f3a1632b2793c2b4fbb434ddb
+SHA1: 18330c7a124e5671405df403c194d09b45345754
+SHA256: cb7707501af3c22ef58c57b61b0a6b115bcb64532024ac730b82b9bed57a266f
+Section: net
+Priority: optional
+Homepage: https://github.com/imoes/vi-mcp
+Description: VI-Gedaechtnis als MCP-Server (Streamable HTTP, ein Prozess)
+ Ein Serverprozess mit einem gemeinsamen Gedaechtnis fuer viele KI-Sitzungen:
+ Objekte mit Hashtags, Erfahrungen, Erkenntnisse, Regeln, Reflexe, gelernte
+ Suchen; ein Gespraech je Sitzung.
+

@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vi-mcp packages</title><style>body{font:15px/1.5 system-ui,sans-serif;max-width:52rem;margin:2rem auto;padding:0 1rem;color:#1d2330}
+pre{background:#f3f4f7;padding:.8rem;overflow-x:auto;border-radius:6px}code{font-size:.92em}h2{margin-top:2rem}.fp{font-family:monospace}</style></head><body>
+<h1>vi-mcp package repository</h1>
+<p>Signed apt and dnf repositories for <a href="https://github.com/imoes/vi-mcp">vi-mcp</a>, so a server gets new versions with its normal updates.
+The same packages are attached to every <a href="https://github.com/imoes/vi-mcp/releases">GitHub release</a>.</p>
+<p>Signing key (OpenPGP, Ed25519): <span class="fp">4598 3154 14EB F86C ABD3 22D9 730B 75BF AC30 36B7</span> — <a href="vi-mcp-repo.asc">vi-mcp-repo.asc</a>.
+Compare the fingerprint with the one in the README of the code repository before you trust it.</p>
+<h2>Debian 12+, Ubuntu 24.04+</h2>
+<pre>sudo curl -fsSLo /usr/share/keyrings/vi-mcp.gpg https://imoes.github.io/vi-mcp-packages/vi-mcp-repo.gpg
+sudo curl -fsSLo /etc/apt/sources.list.d/vi-mcp.sources https://imoes.github.io/vi-mcp-packages/vi-mcp.sources
+sudo apt update &amp;&amp; sudo apt install vi-mcp        # later: sudo apt upgrade</pre>
+<h2>Fedora, AlmaLinux/RHEL 10 (with EPEL)</h2>
+<pre>sudo curl -fsSLo /etc/yum.repos.d/vi-mcp.repo https://imoes.github.io/vi-mcp-packages/vi-mcp.repo
+sudo dnf install vi-mcp                              # later: sudo dnf upgrade</pre>
+<p>dnf asks once to import the key; check that its fingerprint is the one above.</p>
+<h2>Versions</h2>
+<p>apt: 0.50.1-1<br>dnf: 0.50.1-1</p>
+</body></html>
