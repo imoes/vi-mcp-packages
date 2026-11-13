@@ -250,3 +250,24 @@ Description: VI-Gedaechtnis als MCP-Server (Streamable HTTP, ein Prozess)
  Objekte mit Hashtags, Erfahrungen, Erkenntnisse, Regeln, Reflexe, gelernte
  Suchen; ein Gespraech je Sitzung.
 
+Package: vi-mcp
+Version: 0.62.4-1
+Architecture: all
+Maintainer: Thomas Kluge <32100851+imoes@users.noreply.github.com>
+Installed-Size: 2312
+Depends: python3 (>= 3.11), python3-sklearn, python3-cryptography, python3-numpy, python3-yaml, adduser, systemd, debconf (>= 0.5) | debconf-2.0
+Recommends: python3-libtorrent
+Suggests: python3-psycopg, python3-pip
+Filename: pool/main/vi-mcp_0.62.4-1_all.deb
+Size: 533870
+MD5sum: c58fc0394ca7873f86837b6e76e67d03
+SHA1: c87ed88148e74d26db2dd5ea0e08d7314127a236
+SHA256: 0a0091269ad2fce31f61c6c5cc8462dadcbfa97d38928bb36c4a50965076658d
+Section: net
+Priority: optional
+Homepage: https://github.com/imoes/vi-mcp
+Description: VI-Gedaechtnis als MCP-Server (Streamable HTTP, ein Prozess)
+ Ein Serverprozess mit einem gemeinsamen Gedaechtnis fuer viele KI-Sitzungen:
+ Objekte mit Hashtags, Erfahrungen, Erkenntnisse, Regeln, Reflexe, gelernte
+ Suchen; ein Gespraech je Sitzung.
+
