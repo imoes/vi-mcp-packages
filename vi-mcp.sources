@@ -1,0 +1,5 @@
+Types: deb
+URIs: https://imoes.github.io/vi-mcp-packages/apt
+Suites: stable
+Components: main
+Signed-By: /usr/share/keyrings/vi-mcp.gpg
