@@ -2,14 +2,14 @@
 <title>vi-mcp packages</title><style>body{font:15px/1.5 system-ui,sans-serif;max-width:52rem;margin:2rem auto;padding:0 1rem;color:#1d2330}
 pre{background:#f3f4f7;padding:.8rem;overflow-x:auto;border-radius:6px}code{font-size:.92em}h2{margin-top:2rem}.fp{font-family:monospace}</style></head><body>
 <h1>vi-mcp package repository</h1>
-<p>Signed apt and dnf repositories for <a href="https://github.com/imoes/vi-mcp">vi-mcp</a>, so a server gets new versions with its normal updates.
+<p>Signed apt, dnf and pacman repositories for <a href="https://github.com/imoes/vi-mcp">vi-mcp</a>, so a server gets new versions with its normal updates.
 The same packages are attached to every <a href="https://github.com/imoes/vi-mcp/releases">GitHub release</a>.</p>
 <p>Signing key (OpenPGP, Ed25519): <span class="fp">4598 3154 14EB F86C ABD3 22D9 730B 75BF AC30 36B7</span> — <a href="vi-mcp-repo.asc">vi-mcp-repo.asc</a>.
 Compare the fingerprint with the one in the README of the code repository before you trust it.</p>
 <h2>In one line</h2>
 <pre>curl -fsSL https://imoes.github.io/vi-mcp-packages/setup.sh | sudo sh</pre>
-<p>Adds the repository — key and source — on apt and dnf systems, installs nothing else (<a href="setup.sh">read it first</a>). Then
-<code>sudo apt install vi-mcp</code> or <code>sudo dnf install vi-mcp</code>. The same by hand:</p>
+<p>Adds the repository — key and source — on apt, dnf and pacman systems, installs nothing else (<a href="setup.sh">read it first</a>). Then
+<code>sudo apt install vi-mcp</code>, <code>sudo dnf install vi-mcp</code> or <code>sudo pacman -Syu vi-mcp</code>. The same by hand:</p>
 <h2>Debian 12+, Ubuntu 24.04+</h2>
 <pre>sudo curl -fsSLo /usr/share/keyrings/vi-mcp.gpg https://imoes.github.io/vi-mcp-packages/vi-mcp-repo.gpg
 sudo curl -fsSLo /etc/apt/sources.list.d/vi-mcp.sources https://imoes.github.io/vi-mcp-packages/vi-mcp.sources
@@ -18,6 +18,13 @@ sudo apt update &amp;&amp; sudo apt install vi-mcp        # later: sudo apt upgr
 <pre>sudo curl -fsSLo /etc/yum.repos.d/vi-mcp.repo https://imoes.github.io/vi-mcp-packages/vi-mcp.repo
 sudo dnf install vi-mcp                              # later: sudo dnf upgrade</pre>
 <p>dnf asks once to import the key; check that its fingerprint is the one above.</p>
+<h2>Arch Linux, CachyOS</h2>
+<pre>curl -fsSLo /tmp/vi-mcp-repo.asc https://imoes.github.io/vi-mcp-packages/vi-mcp-repo.asc &amp;&amp; sudo pacman-key --add /tmp/vi-mcp-repo.asc
+sudo pacman-key --lsign-key 4598315414EBF86CABD322D9730B75BFAC3036B7
+curl -fsSL https://imoes.github.io/vi-mcp-packages/vi-mcp.pacman.conf | sudo tee -a /etc/pacman.conf
+sudo pacman -Syu vi-mcp                              # later: sudo pacman -Syu
+sudo systemctl enable --now vi-mcp.service</pre>
+<p>Packages and the database are signed (<code>SigLevel = Required</code>); the key is trusted only for what you sign locally.</p>
 <h2>Versions</h2>
-<p>apt: 0.66.1-1, 0.67.0-1, 0.68.0-1, 0.68.1-1, 0.69.0-1, 0.69.1-1, 0.69.2-1, 0.69.3-1, 0.69.4-1, 0.69.6-1, 0.69.7-1, 0.69.8-1<br>dnf: 0.66.1-1, 0.67.0-1, 0.68.0-1, 0.68.1-1, 0.69.0-1, 0.69.1-1, 0.69.2-1, 0.69.3-1, 0.69.4-1, 0.69.6-1, 0.69.7-1, 0.69.8-1</p>
+<p>apt: 0.66.1-1, 0.67.0-1, 0.68.0-1, 0.68.1-1, 0.69.0-1, 0.69.1-1, 0.69.2-1, 0.69.3-1, 0.69.4-1, 0.69.6-1, 0.69.7-1, 0.69.8-1, 0.69.9-1<br>dnf: 0.66.1-1, 0.67.0-1, 0.68.0-1, 0.68.1-1, 0.69.0-1, 0.69.1-1, 0.69.2-1, 0.69.3-1, 0.69.4-1, 0.69.6-1, 0.69.7-1, 0.69.8-1, 0.69.9-1<br>pacman: 0.69.9-1</p>
 </body></html>
